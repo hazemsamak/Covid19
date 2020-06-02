@@ -1,0 +1,37 @@
+
+<div class="spinner" ng-show="loading">
+    <img src="https://www.nasa.gov/multimedia/videogallery/ajax-loader.gif" />
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+            <th scope="col" align="left">#</th>
+            <th scope="col" align="left">Country</th>
+            <th scope="col" align="left">Total Cases</th>
+            <th scope="col" align="left">New Cases</th> 
+            <th scope="col" align="left">Total Deaths</th> 
+            <th scope="col" align="left">New Deaths</th> 
+            <th scope="col" align="left">Recovered</th> 
+            <th scope="col" align="left">Active Cases</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="country in countries" ng-class="getClass('{{day.date.gregorian.date}}')">
+            <th scope="row">{{country.Index}}</th>
+            <td style="font-weight:bold" align="left">{{country.Name}}</td>
+            <td align="left">{{country.TotalCases}}</td>
+            <td style="font-weight:bold;color: #DC143C;" align="left">{{country.NewCases}}</td>
+            <td align="left">{{country.TotalDeaths}} (<b>{{country.TotalDeathsPerc}} %</b>)</td>
+            <td style="font-weight:bold;color: #DC143C;" align="left">{{country.NewDeaths}}</td>
+            <td align="left">{{country.Recovered}} (<b>{{country.RecoveredPerc}} %</b>)</td>
+            <td align="left">{{country.ActiveCases}} (<b>{{country.ActiveCasesPerc}} %</b>)</td>
+        </tr>
+
+      </tbody>
+    </table>
+</div>
+
+
+

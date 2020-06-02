@@ -1,0 +1,28 @@
+body {
+  -webkit-print-color-adjust: exact !important;
+}
+
+.highlightRow {
+  background: green;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #ADD8E6 !important;
+}
+
+@media print {
+    .table thead {
+      background-color: transparent !important;
+    }
+    .table td {
+      background-color: transparent !important;
+    }
+    
+    .table th {
+      background-color: transparent !important;
+    }
+    
+    .table tr {
+      background-color: transparent !important;
+    }
+  }
