@@ -26,3 +26,7 @@ body {
       background-color: transparent !important;
     }
   }
+
+.scrollme {
+    overflow-x: auto;
+}
